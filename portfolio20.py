@@ -25,7 +25,7 @@ def render_skill_icons(skills):
     badges = ""
     for skill in skills.split(","):
         skill = skill.strip().lower().replace(" ", "_")
-        icon_path = f"Portfolio/Skills/{skill}.png"
+        icon_path = f"Skills/{skill}.png"
         if os.path.exists(icon_path):
             badges += f'<img src="data:image/png;base64,{get_img_base64(icon_path)}" title="{skill}" style="height:100px; margin:10px;">'
         else:
@@ -107,7 +107,7 @@ if selected == "Home":
     col1, col2 = st.columns([1, 2])
 
     with col1:
-        image = Image.open("Portfolio/PP4.png")
+        image = Image.open("PP4.png")
         st.image(image.resize((400, 400)), use_container_width=False)
     with col2:
         st.title("Zaid Ahamed")
@@ -221,12 +221,12 @@ elif selected == "About":
         # display_certificate("Portfolio\Certifications\Google Advanced Data Analytics.jpg", "Advanced Data Analytics Specialization", "Google", "2024")
         # display_certificate("Portfolio/cert_ibm_analytics.png", "Data Analytics Specialization", "IBM", "2023")
         certificate_list = [
-            {"image": "Portfolio/Certifications/AWS_Cloud_Practitioner.png", "name": "AWS Cloud Practitioner (CLF-C02)", "platform": "DataCamp", "date": "2025"},
-            {"image": "Portfolio/Certifications/Data_Engineer_in_Python.png", "name": "Data Engineer in Python", "platform": "DataCamp", "date": "2025"},
-            {"image": "Portfolio/Certifications/Associate_Data_Engineer.png", "name": "ASSOCIATE DATA ENGINEER", "platform": "DataCamp", "date": "2024"},
-            {"image": "Portfolio/Certifications/Associate_Data_Engineer_in_SQL.png", "name": " Associate Data Engineer in SQL", "platform": "DataCamp", "date": "2024"},
-            {"image": "Portfolio/Certifications/Google_Advanced_Data_Analytics.png", "name": "Advanced Data Analytics Specialization", "platform": "Coursera", "date": "2024"},
-            {"image": "Portfolio/Certifications/IBM_Data_Analyst.png", "name": "Advanced Data Analytics Specialization", "platform": "Coursera", "date": "2023"}
+            {"image": "Certifications/AWS_Cloud_Practitioner.png", "name": "AWS Cloud Practitioner (CLF-C02)", "platform": "DataCamp", "date": "2025"},
+            {"image": "Certifications/Data_Engineer_in_Python.png", "name": "Data Engineer in Python", "platform": "DataCamp", "date": "2025"},
+            {"image": "Certifications/Associate_Data_Engineer.png", "name": "ASSOCIATE DATA ENGINEER", "platform": "DataCamp", "date": "2024"},
+            {"image": "Certifications/Associate_Data_Engineer_in_SQL.png", "name": " Associate Data Engineer in SQL", "platform": "DataCamp", "date": "2024"},
+            {"image": "Certifications/Google_Advanced_Data_Analytics.png", "name": "Advanced Data Analytics Specialization", "platform": "Coursera", "date": "2024"},
+            {"image": "Certifications/IBM_Data_Analyst.png", "name": "Advanced Data Analytics Specialization", "platform": "Coursera", "date": "2023"}
         ]
         display_certificate_grid(certificate_list)
 
@@ -237,44 +237,44 @@ elif selected == "Projects":
     tabs = st.tabs(["Data Engineering", "Data Analysis"])
 
     with tabs[0]:
-        display_project("Portfolio/projects/GEE_ETL_Diagram.png", "Satellite Image Data Extraction Project", 
+        display_project("projects/GEE_ETL_Diagram.png", "Satellite Image Data Extraction Project", 
                         """
                         - Created robust, production-ready ETL pipelines to efficiently extract satellite image data from Google Earth Engine.
                         - Transformed and loaded data into PostgreSQL for analysis and reporting.
                         - Built with error handling, scalable, and automation support.
                         - Developed Webapp using Streamlit for Visualize the NDVI data.
                         """, "Python, SQL, PostgreSQL, ETL, Google Earth Engine, Streamlit", "https://github.com/zaid638/GEE-Data-Extraction")
-        display_project("Portfolio/projects/Job_Analysis_ETL_Diagram.png", "Job Analysis Project",
+        display_project("projects/Job_Analysis_ETL_Diagram.png", "Job Analysis Project",
                         """
                         - Developed an ETL pipeline using Python and created an interactive dashboard with PowerBI to analyze job postings.  
                         - Identified trends and insights in job requirements, skills, education levels, and experience to inform job seekers and recruiters.
                         """, "Python, Pandas, BeautifulSoupWeb, Power BI, Excel, Web Scraping", "https://github.com/zaid638/Job-Analysis-Project")
-        display_project("Portfolio/projects/Marketing_ETL_Diagram.png", "Marketing ETL Pipeline Project", 
+        display_project("projects/Marketing_ETL_Diagram.png", "Marketing ETL Pipeline Project", 
                         """
                         - Developed a Python-based ETL pipeline to process customer data from Excel, leveraged pandas for efficient data manipulation. 
                         - Demonstrated proficient database integration by loading US customer records to MySQL and UK/India customer records to PostgreSQL. 
                         - Generated comprehensive metadata in JSON format for enhanced data governance and traceability.
                         """, "Python, SQL, Excel, MySQL, PostgreSQL", "https://github.com/zaid638/Marketing-ETL-Pipeline")
-        display_project("Portfolio/projects/Retail_ETL_Diagram.png", "Retail Data Pipeline Project", 
+        display_project("projects/Retail_ETL_Diagram.png", "Retail Data Pipeline Project", 
                         """
                         - Developed a data pipeline for analyzing supply and demand patterns, particularly around holidays. 
                         - Conducted preliminary data analysis to extract initial insights.
                         """, "Python, SQL, Excel, PostgreSQL", "https://github.com/zaid638/Data-Camp-Projects/tree/main")
-        display_project("Portfolio/projects/17.png", "Cleaning an Orders Dataset with PySpark Project", 
+        display_project("projects/17.png", "Cleaning an Orders Dataset with PySpark Project", 
                         """
-                        - In this project, I work with e-commerce company and used PySpark, for data processing, to clean an orders dataset. 
-                        - I have been requested by a peer Machine Learning team to clean the data containing the information about orders made last year. They are planning to further use this cleaned data to build a demand forecasting model. To achieve this, they have shared their requirements regarding the desired output format.
+                        - In this project, I work with an e-commerce company and use PySpark for data processing, to clean an orders dataset. 
+                        - A peer Machine Learning team has requested me to clean the data containing the information about orders made last year. They are planning to further use this cleaned data to build a demand forecasting model. To achieve this, they have shared their requirements regarding the desired output format.
                         """, "Python, PySpark", "https://github.com/zaid638/Data-Camp-Projects")
 
     with tabs[1]:
-        display_project("Portfolio/projects/Dashboard1.png", "Job Analysis Project", 
+        display_project("projects/Dashboard1.png", "Job Analysis Project", 
                         """
-                        - Created an ETL pipeline using Python to clean and transform job posting data, then built a dashboard using PowerBI to analyze trends in job requirements and skills. 
+                        - Created an ETL pipeline using Python to clean and transform job posting data, then built a dashboard using Power BI to analyze trends in job requirements and skills. 
                         - Demonstrated ability to turn raw data into actionable insights for understanding market dynamics.
                         """, "Python, Pandas, Web Scraping, PowerBI, Excel", "https://github.com/zaid638/Job-Analysis-Project")
-        display_project("Portfolio/projects/Dashboard2.png", "AtliQ Grands Hotel Dashboard", 
+        display_project("projects/Dashboard2.png", "AtliQ Grands Hotel Dashboard", 
                         """
-                        - A BI Dashboard created for a luxury hotel chain to Analyze the Data and give required insights and recommendations.
+                        - A BI Dashboard created for a luxury hotel chain to analyze the Data and give required insights and recommendations.
                         """, "Python,  Excel, Power BI, DAX, Data Visualization", "https://github.com/zaid638/Analysis-of-AtliQ-Grands-Hospitality-Domain")
         # display_project("Portfolio/projects/Dashboard3.png", "Technology Trend Analysis", " Analyzed real-world datasets, created visualizations & interactive dashboards, and presented reports on data analysis findings. The findings of this analysis offer valuable insights into the trends shaping the technological landscape in programming language, databases, platforms, web frameworks sectors.", "Python, SQL, Tableau, Excel", "https://github.com/zaid638/IBM-Capstone-Project")
         # display_project("Portfolio/projects/GEE_ETL_Diagram.png", "Cricket Analysis", "Prepared banking campaign data by handling nulls, deduplication, and column normalization.", "Data Cleaning, Pandas, Excel", "https://github.com/zaid638/BankMarketingCleaning")
@@ -321,3 +321,4 @@ st.markdown("""
     }
 </style>
 """, unsafe_allow_html=True)
+
