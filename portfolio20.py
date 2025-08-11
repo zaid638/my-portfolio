@@ -293,7 +293,7 @@ elif selected == "Contact":
         <input type="email" name="email" placeholder="Your email" required style="width: 100%; padding: 8px; margin-bottom: 10px;"><br>
         <textarea name="message" placeholder="Your message" rows="5" required style="width: 100%; padding: 8px; margin-bottom: 10px;"></textarea><br>
         <button type="submit" style="padding: 10px 20px; background-color: #1a3355; color: white; border: none;">Send</button>
-        <input type="hidden" name="_next" value="http://localhost:8501/">
+        <input type="hidden" name="_next" value="https://zaid-ahamed.streamlit.app/">
     </form>
     """
     st.markdown(contact_form, unsafe_allow_html=True)
@@ -321,4 +321,5 @@ st.markdown("""
     }
 </style>
 """, unsafe_allow_html=True)
+
 
