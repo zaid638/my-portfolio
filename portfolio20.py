@@ -108,7 +108,7 @@ if selected == "Home":
 
     with col1:
         image = Image.open("PP4.png")
-        st.image(image.resize((400, 400)), use_container_width=False)
+        st.image(image.resize((400, 400)), use_column_width=False)
     with col2:
         st.title("Zaid Ahamed")
         st.subheader("Data Engineer | Data Analyst")
@@ -321,6 +321,7 @@ st.markdown("""
     }
 </style>
 """, unsafe_allow_html=True)
+
 
 
 
