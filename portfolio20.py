@@ -86,7 +86,7 @@ def display_project(image_path, title, description, skills, github_link):
         col1, col2 = st.columns([1, 2])
         with col1:
             image = Image.open(image_path)
-            st.image(image.resize((450, 300)), use_container_width=False)
+            st.image(image.resize((450, 300)), use_column_width=False)
         with col2:
             st.markdown(description)
             st.markdown(render_skill_badges(skills), unsafe_allow_html=True)
@@ -321,5 +321,6 @@ st.markdown("""
     }
 </style>
 """, unsafe_allow_html=True)
+
 
 
